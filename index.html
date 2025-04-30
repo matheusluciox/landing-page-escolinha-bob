@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolinha de Skate do Bob</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo-placeholder">
+        <!-- Arrumar o tamanho da logo (imagem mesmo), não está do tamanho certo -->
+        <!-- <img style="height: 40px; width: auto; margin-left: 8px;" src="img/logo.png" alt=""> -->
+         <span>LOGO</span>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre-mim">Sobre Mim</a></li>
+          <li><a href="#projeto">Projeto</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INÍCIO -->
+  <section id="inicio" class="hero">
+    <img src="img/foto-inicial.png" alt="Imagem inicial" class="hero-img" />
+    <div class="hero-text">
+      <h1>Escolinha de Skate do Bob</h1>
+      <p>Transformando vidas sobre quatro rodas</p>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM -->
+  <section id="sobre-mim" class="about">
+    <div class="container about-container">
+      <img src="img/foto-bob.png" alt="Foto do Bob" class="profile-img" />
+      <div class="about-text">
+        <h2>Quem sou eu</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio perspiciatis fuga necessitatibus iste aliquam? Necessitatibus vel alias obcaecati odio inventore quod saepe autem! Libero, ipsa officia eum nesciunt fuga ipsam!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE O PROJETO -->
+  <section id="projeto" class="project">
+    <div class="container">
+      <h2>Sobre o Projeto</h2>
+      <p>A Escolinha de Skate do Bob oferece aulas práticas e teóricas para todas as idades. Nosso objetivo é promover inclusão, disciplina e diversão com o skate como ferramenta de transformação social.</p>
+      <div class="gallery">
+        <img src="img/imagem1.png" alt="Aula 1">
+        <img src="img/imagem2.png" alt="Aula 2">
+        <img src="img/imagem3.png" alt="Aula 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO -->
+  <section id="contato" class="formulario">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <form action="#" method="POST">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <br> <br>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d865.7270276010697!2d-54.65200406452246!3d-16.44320007050478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9379c9c348d3ae21%3A0xf35ecfe907181330!2sR.%20Domingos%20de%20Lima%20-%20Rondon%C3%B3polis%2C%20MT%2C%2078710-240!3m2!1d-16.4433841!2d-54.6516838!5e1!3m2!1spt-BR!2sbr!4v1745974501861!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Escolinha de Skate do Bob. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</html>
