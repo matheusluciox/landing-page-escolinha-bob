@@ -4,91 +4,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Escolinha de Skate do Bob</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="font-sans bg-white text-blue-900">
 
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo-placeholder">
-        <!-- Arrumar o tamanho da logo (imagem mesmo), não está do tamanho certo -->
-        <!-- <img style="height: 40px; width: auto; margin-left: 8px;" src="img/logo.png" alt=""> -->
-         <span>LOGO</span>
+  <header class="bg-blue-900 text-white fixed top-0 left-0 w-full shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center space-x-2">
+        <!-- Substitua pela sua logo real -->
+        <img src="img/logo.png" alt="Logo" class="h-10 w-auto" />
+        <span class="font-bold text-lg">Escolinha do Bob</span>
       </div>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre-mim">Sobre Mim</a></li>
-          <li><a href="#projeto">Projeto</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
+      <!-- Botão Hamburguer -->
+      <button id="menu-toggle" class="text-white md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Menu desktop -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#inicio" class="hover:text-yellow-400">Início</a>
+        <a href="#sobre-mim" class="hover:text-yellow-400">Sobre</a>
+        <a href="#projeto" class="hover:text-yellow-400">Projeto</a>
+        <a href="#contato" class="hover:text-yellow-400">Contato</a>
       </nav>
+    </div>
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-blue-900">
+      <a href="#inicio" class="block py-2 hover:text-yellow-400">Início</a>
+      <a href="#sobre-mim" class="block py-2 hover:text-yellow-400">Sobre</a>
+      <a href="#projeto" class="block py-2 hover:text-yellow-400">Projeto</a>
+      <a href="#contato" class="block py-2 hover:text-yellow-400">Contato</a>
     </div>
   </header>
 
   <!-- INÍCIO -->
-  <section id="inicio" class="hero">
-    <img src="img/foto-inicial.png" alt="Imagem inicial" class="hero-img" />
-    <div class="hero-text">
-      <h1>Escolinha de Skate do Bob</h1>
-      <p>Transformando vidas sobre quatro rodas</p>
+  <section id="inicio" class="relative h-[60vh] overflow-hidden">
+    <!-- Imagem de fundo -->
+    <img src="img/foto-inicial.png" alt="Imagem inicial" class="w-full h-full object-cover" />
+  
+    <!-- Sobreposição escura -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+    <!-- Texto centralizado -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-10">
+      <h1 class="text-3xl md:text-5xl font-bold">Escolinha de Skate do Bob</h1>
+      <p class="text-lg md:text-2xl mt-2">Transformando vidas sobre quatro rodas</p>
     </div>
   </section>
+  
 
   <!-- SOBRE MIM -->
-  <section id="sobre-mim" class="about">
-    <div class="container about-container">
-      <img src="img/foto-bob.png" alt="Foto do Bob" class="profile-img" />
-      <div class="about-text">
-        <h2>Quem sou eu</h2>
+  <section id="sobre-mim" class="bg-blue-300 text-white py-16 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8">
+      <img src="img/foto-bob.png" alt="Foto do Bob" class="w-48 h-48 object-cover rounded-full" />
+      <div class="text-center md:text-left">
+        <h2 class="text-2xl font-bold mb-4">Quem sou eu</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio perspiciatis fuga necessitatibus iste aliquam? Necessitatibus vel alias obcaecati odio inventore quod saepe autem! Libero, ipsa officia eum nesciunt fuga ipsam!</p>
       </div>
     </div>
   </section>
 
   <!-- SOBRE O PROJETO -->
-  <section id="projeto" class="project">
-    <div class="container">
-      <h2>Sobre o Projeto</h2>
-      <p>A Escolinha de Skate do Bob oferece aulas práticas e teóricas para todas as idades. Nosso objetivo é promover inclusão, disciplina e diversão com o skate como ferramenta de transformação social.</p>
-      <div class="gallery">
-        <img src="img/imagem1.png" alt="Aula 1">
-        <img src="img/imagem2.png" alt="Aula 2">
-        <img src="img/imagem3.png" alt="Aula 3">
+  <section id="projeto" class="py-16 px-4 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Sobre o Projeto</h2>
+      <p class="mb-8">A Escolinha de Skate do Bob oferece aulas práticas e teóricas para todas as idades. Nosso objetivo é promover inclusão, disciplina e diversão com o skate como ferramenta de transformação social.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <img src="img/imagem1.png" alt="Aula 1" class="w-full rounded-lg" />
+        <img src="img/imagem2.png" alt="Aula 2" class="w-full rounded-lg" />
+        <img src="img/imagem3.png" alt="Aula 3" class="w-full rounded-lg" />
       </div>
     </div>
   </section>
 
   <!-- FORMULÁRIO -->
-  <section id="contato" class="formulario">
-    <div class="container">
-      <h2>Entre em Contato</h2>
-      <form action="#" method="POST">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
+  <section id="contato" class="bg-yellow-400 py-16 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold text-blue-900 text-center mb-6">Entre em Contato</h2>
+      <form action="#" method="POST" class="max-w-xl mx-auto flex flex-col gap-4">
+        <div>
+          <label for="nome" class="block font-semibold mb-1">Nome</label>
+          <input type="text" id="nome" name="nome" required class="w-full p-3 rounded-md border-none" />
+        </div>
+        <div>
+          <label for="email" class="block font-semibold mb-1">Email</label>
+          <input type="email" id="email" name="email" required class="w-full p-3 rounded-md border-none" />
+        </div>
+        <div>
+          <label for="mensagem" class="block font-semibold mb-1">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required class="w-full p-3 rounded-md border-none"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-900 text-white font-bold py-3 rounded-md hover:bg-blue-800">Enviar</button>
       </form>
 
-      <br> <br>
-      
-      <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d865.7270276010697!2d-54.65200406452246!3d-16.44320007050478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9379c9c348d3ae21%3A0xf35ecfe907181330!2sR.%20Domingos%20de%20Lima%20-%20Rondon%C3%B3polis%2C%20MT%2C%2078710-240!3m2!1d-16.4433841!2d-54.6516838!5e1!3m2!1spt-BR!2sbr!4v1745974501861!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+      <div class="mt-10">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d865.7270276010697!2d-54.65200406452246!3d-16.44320007050478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x9379c9c348d3ae21%3A0xf35ecfe907181330!2sR.%20Domingos%20de%20Lima%20-%20Rondon%C3%B3polis%2C%20MT%2C%2078710-240!3m2!1d-16.4433841!2d-54.6516838!5e1!3m2!1spt-BR!2sbr!4v1745974501861!5m2!1spt-BR!2sbr"
+          class="w-full h-80 rounded-md border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </section>
 
   <!-- RODAPÉ -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Escolinha de Skate do Bob. Todos os direitos reservados.</p>
-    </div>
+  <footer class="bg-blue-900 text-white text-center py-6 mt-12">
+    <p>&copy; 2025 Escolinha de Skate do Bob. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- JS: controle do menu hambúrguer -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
 </html>
